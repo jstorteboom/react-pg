@@ -3,8 +3,14 @@ import ReactDOM from 'react-dom';
 import { App } from './App';
 import { mergeStyles } from '@fluentui/react';
 import reportWebVitals from './reportWebVitals';
+import { loadPowerAppTheme } from './loadTheme';
+import { initializeIcons } from '@fluentui/font-icons-mdl2';
 
 // Inject some global styles
+var theme = loadPowerAppTheme();
+
+initializeIcons();
+
 mergeStyles({
   ':global(body,html,#root)': {
     margin: 0,
